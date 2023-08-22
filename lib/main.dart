@@ -58,11 +58,11 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Version: 1.1.0', // Change version number
+              'Version: 1.5.0', // Change version number
               style: TextStyle(fontSize: 24),
             ),
             Text(
-              'Welcome to the updated app! New version ', // Change greeting message
+              'Welcome to the updated app! New version !! ', // Change greeting message
               style: TextStyle(fontSize: 18),
             ),
 

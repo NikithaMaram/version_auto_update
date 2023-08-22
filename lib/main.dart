@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Version: 1.5.0', // Change version number
+              'Version: 1.6.0', // Change version number
               style: TextStyle(fontSize: 24),
             ),
             Text(

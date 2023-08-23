@@ -43,7 +43,7 @@ class HomePage1 extends StatelessWidget {
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage2()));
               },
-              child: Text('Go to home Page 2'),
+              child: Text('Go to home Page 2.................'),
             ),
           ],
         ),

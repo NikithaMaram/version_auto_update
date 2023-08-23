@@ -30,7 +30,7 @@ class HomePage1 extends StatelessWidget {
           children: [
             Text(
               'Welcome to the Home Page',
-              style: TextStyle(fontSize: 24,color: Colors.pink),
+              style: TextStyle(fontSize: 24,color: Colors.yellow),
             ),
             SizedBox(height: 20),
             ElevatedButton(

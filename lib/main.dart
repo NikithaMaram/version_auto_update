@@ -94,7 +94,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hello, Flutter Web 2.7!'),
+        title: Text('Hello, Flutter Web 2.8!'),
       ),
       body: Center(
         child: Column(

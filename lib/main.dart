@@ -59,7 +59,7 @@ class AboutPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('About Page'),
       ),
-      backgroundColor: Colors.cyan,
+      backgroundColor: Colors.blue,
       body: Center(
         child: Text(
           'This is the About Page.',
@@ -77,7 +77,7 @@ class ContactPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Contact Page'),
       ),
-      backgroundColor: Colors.cyanAccent,
+      backgroundColor: Colors.red,
       body: Center(
         child: Text(
           'This is the Contact Page.',

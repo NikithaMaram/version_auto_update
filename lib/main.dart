@@ -22,7 +22,7 @@ class HomePage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('Home Page 1'),
       ),
       body: Center(
         child: Column(
@@ -43,7 +43,7 @@ class HomePage1 extends StatelessWidget {
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage2()));
               },
-              child: Text('Go to Contact Page'),
+              child: Text('Go to home Page 2'),
             ),
           ],
         ),
@@ -97,6 +97,7 @@ class ContactPage extends StatelessWidget {
     );
   }
 }
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -104,6 +105,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home Page'),
       ),
+      backgroundColor: Colors.cyan,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -117,7 +119,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage1()));
               },
-              child: Text('Go to About Page'),
+              child: Text('Go to hp 1'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -137,14 +139,15 @@ class HomePage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('Home Page 2'),
       ),
+      backgroundColor: Colors.yellow,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Welcome to the Home Page',
+              'Welcome to the Home Page 2',
               style: TextStyle(fontSize: 24),
             ),
             SizedBox(height: 20),
@@ -158,7 +161,7 @@ class HomePage2 extends StatelessWidget {
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage3()));
               },
-              child: Text('Go to Contact Page'),
+              child: Text('Go hp3'),
             ),
           ],
         ),
@@ -172,8 +175,9 @@ class HomePage3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('Home Page 3'),
       ),
+      backgroundColor: Colors.greenAccent,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

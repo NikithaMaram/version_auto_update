@@ -105,6 +105,7 @@ class MyHomePage extends StatelessWidget {
               style: TextStyle(fontSize: 24),
             ),
             SizedBox(height: 20),
+            Image.asset('assets/download.jpeg'),
             ElevatedButton(
               onPressed: _openLink,
               child: Text('Visit Flutter Website'),

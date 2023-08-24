@@ -69,6 +69,13 @@
                 if (serviceWorker.state == 'activated') {
                   console.log('Installed new service worker.');
                   loadMainDartJs();
+                  if (navigator.serviceWorker.controller) {
+                              // you have a better UI here, reloading is not a great user experince here.
+                              const confirmed = alert('New version of the app is available. Refresh now');
+                              if (confirmed == true) {
+                                window.location.reload();
+                              }
+                        }
                 }
               });
             }

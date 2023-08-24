@@ -24,12 +24,13 @@ class HomePage1 extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home Page 1'),
       ),
+      backgroundColor: Colors.pink,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Welcome to the Home Page lets see how the service worker works 1 2 3 4 5 6 7 8 9.........',
+              'Welcome to the Home Page lets see how the service worker works ',
               style: TextStyle(fontSize: 24,color: Colors.blueAccent),
             ),
             SizedBox(height: 20),

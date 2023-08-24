@@ -29,7 +29,7 @@ class HomePage1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Welcome to the Home Page lets see how the service worker works',
+              'Welcome to the Home Page lets see how the service worker works 1',
               style: TextStyle(fontSize: 24,color: Colors.blueAccent),
             ),
             SizedBox(height: 20),

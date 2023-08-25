@@ -24,7 +24,7 @@ class HomePage1 extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home Page 2'),
       ),
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.purple,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

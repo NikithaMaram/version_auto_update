@@ -35,7 +35,9 @@
   <script>
     // The value below is injected by flutter build, do not touch.
     var serviceWorkerVersion = null;
+    console.log('Installed new service worker in head.'+ serviceWorkerVersion);
   </script>
+
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
@@ -58,7 +60,9 @@
 <!--  </script>-->
 <script>
     var scriptLoaded = false;
+    console.log('Installed new service worker in body.'+ serviceWorkerVersion);
     function loadMainDartJs() {
+    console.log('Installed new service worker in loadMainDartJs.'+ serviceWorkerVersion);
       if (scriptLoaded) {
         return;
       }

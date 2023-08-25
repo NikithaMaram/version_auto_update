@@ -48,6 +48,7 @@
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function(engineInitializer) {
+          console.log('on entry point loaded');
           engineInitializer.initializeEngine().then(function(appRunner) {
             appRunner.runApp();
           });

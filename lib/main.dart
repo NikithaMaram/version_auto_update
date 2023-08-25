@@ -22,16 +22,16 @@ class HomePage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page 1'),
+        title: Text('Home Page 2'),
       ),
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.orangeAccent,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Welcome to the Home Page lets see how the service worker works ',
-              style: TextStyle(fontSize: 24,color: Colors.blueAccent),
+              style: TextStyle(fontSize: 24, color: Colors.blueAccent),
             ),
             SizedBox(height: 20),
             ElevatedButton(

@@ -38,10 +38,8 @@
 
 <script>
 var serviceWorkerVersion = null;
-    console.log(serviceWorkerVersion);
     var scriptLoaded = false;
     function loadMainDartJs() {
-    console.log('Installed new service worker in loadMainDartJs.'+ serviceWorkerVersion);
       if (scriptLoaded) {
         return;
       }
@@ -58,7 +56,8 @@ var serviceWorkerVersion = null;
         // Wait for registration to finish before dropping the <script> tag.
         // Otherwise, the browser will load the script multiple times,
         // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=';
+         //var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
         navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {
             function waitForActivation(serviceWorker) {

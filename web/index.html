@@ -38,13 +38,10 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
-<script>
-    // The value below is injected by flutter build, do not touch.
 
-    var serviceWorkerVersion = null;
-    console.log(serviceWorkerVersion);
-  </script>
 <script>
+var serviceWorkerVersion = null;
+    console.log(serviceWorkerVersion);
     var scriptLoaded = false;
     function loadMainDartJs() {
     console.log('Installed new service worker in loadMainDartJs.'+ serviceWorkerVersion);

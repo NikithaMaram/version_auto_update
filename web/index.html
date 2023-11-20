@@ -37,8 +37,11 @@
 <body>
 
 <script>
+<!--The current flutter build web command replaces the value of serviceWorkerVersion by a build number, if it's in index.html.-->
+<!--https://github.com/flutter/flutter/issues/130212#issuecomment-1634781266-->
 var serviceWorkerVersion = null;
     var scriptLoaded = false;
+<!--loadMainDartJs() is invoked on different conditions where the app is ready to load the main Dart JavaScript file, like service worker Activation, Existing Service Worker, FallBack.-->
     function loadMainDartJs() {
       if (scriptLoaded) {
         return;

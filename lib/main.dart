@@ -70,9 +70,9 @@ class AboutPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CardListScreen()));
               },
-              child: Text('Go to About Page'),
+              child: Text('Go to=card list screen'),
             ),
           ],
         ),
@@ -205,4 +205,64 @@ class HomePage3 extends StatelessWidget {
       ),
     );
   }
+}
+class CardListScreen extends StatelessWidget {
+  final List<CardItem> cardItems = [
+    CardItem(title: 'Card 1', content: 'Details for Card 1'),
+    CardItem(title: 'Card 2', content: 'Details for Card 2'),
+    CardItem(title: 'Card 3', content: 'Details for Card 3'),
+    // Add more card items as needed
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Card List'),
+      ),
+      body: ListView.builder(
+        itemCount: cardItems.length,
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: () {
+              _showCardDetailsDialog(context, cardItems[index]);
+            },
+            child: Card(
+              child: ListTile(
+                title: Text(cardItems[index].title),
+                subtitle: Text('Tap to view details'),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  void _showCardDetailsDialog(BuildContext context, CardItem cardItem) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(cardItem.title),
+          content: Text(cardItem.content),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('Close'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+
+class CardItem {
+  final String title;
+  final String content;
+
+  CardItem({required this.title, required this.content});
 }

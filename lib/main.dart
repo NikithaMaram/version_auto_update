@@ -36,7 +36,7 @@ class HomePage1 extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => AboutPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CardListScreen()));
               },
               child: Text('Go to About Pages'),
             ),

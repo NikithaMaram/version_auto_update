@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Simple Multi-Page App',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.red,
       ),
-      home:HomePage1(),
+      home: HomePage(),
     );
   }
 }
@@ -22,9 +22,9 @@ class HomePage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page 2'),
+        title: Text('Home Page 1'),
       ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.yellow,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -38,61 +38,9 @@ class HomePage1 extends StatelessWidget {
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => CardListScreen()));
               },
-              child: Text('Go to About Pages'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage2()));
-              },
-              child: Text('Go to home Page new'),
+              child: Text('Go to cards Pages'),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class AboutPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('About Page'),
-      ),
-      backgroundColor: Colors.blue,
-      body: Center(
-        child: Column(
-          children: [
-            Text(
-              'This is the About Page.',
-              style: TextStyle(fontSize: 24),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => CardListScreen()));
-              },
-              child: Text('Go to=card list screen'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ContactPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Contact Page'),
-      ),
-      backgroundColor: Colors.red,
-      body: Center(
-        child: Text(
-          'This is the Contact Page.',
-          style: TextStyle(fontSize: 24),
         ),
       ),
     );
@@ -106,7 +54,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home Page'),
       ),
-      backgroundColor: Colors.cyan,
+      backgroundColor: Colors.green,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -122,12 +70,6 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Go to hp 1'),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => ContactPage()));
-              },
-              child: Text('Go to Contact Page'),
-            ),
           ],
         ),
       ),
@@ -135,77 +77,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class HomePage2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Page 2'),
-      ),
-      backgroundColor: Colors.yellow,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Welcome to the Home Page 2',
-              style: TextStyle(fontSize: 24),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => AboutPage()));
-              },
-              child: Text('Go to About Page'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage3()));
-              },
-              child: Text('Go hp3'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class HomePage3 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Page 3'),
-      ),
-      backgroundColor: Colors.greenAccent,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Welcome to the Home Page',
-              style: TextStyle(fontSize: 24),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => AboutPage()));
-              },
-              child: Text('Go to About Page'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => ContactPage()));
-              },
-              child: Text('Go to Contact Page'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 class CardListScreen extends StatelessWidget {
   final List<CardItem> cardItems = [
     CardItem(title: 'Card 1', content: 'Details for Card 1'),

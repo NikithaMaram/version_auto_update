@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MyApp());
@@ -48,6 +49,16 @@ class HomePage1 extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  List<String> imageURLs = [
+    'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg',
+    'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1788614524.1701734400&semt=ais',
+    'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg',
+    'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1788614524.1701734400&semt=ais',
+    'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg',
+    'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1788614524.1701734400&semt=ais',
+    'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg',
+    'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1788614524.1701734400&semt=ais',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,6 +80,20 @@ class HomePage extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage1()));
               },
               child: Text('Go to hp 1'),
+            ),
+            ListView.builder(
+              itemCount: imageURLs.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.network(
+                    imageURLs[index],
+                    width: 200.0, // Adjust the width as needed
+                    height: 200.0, // Adjust the height as needed
+                    fit: BoxFit.cover, // Adjust the BoxFit as needed
+                  ),
+                );
+              },
             ),
           ],
         ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'new1.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: HomePage(),
+      home: MyHomePageone(),
     );
   }
 }
@@ -49,7 +51,6 @@ class HomePage1 extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,7 +73,6 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Go to hp 1'),
             ),
-
           ],
         ),
       ),
